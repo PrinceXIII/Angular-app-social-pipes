@@ -1,0 +1,14 @@
+<div class="container">
+  <h2>Utilisateurs</h2>
+
+  <article *ngFor="let utilisateur of utilisateurs">
+    <div class="grid">
+      <div
+        class="avatar"
+        [ngStyle]="{'background-image' : 'url(' +( utilisateur.avatar | defaut: avatarDefaut)+  ')'}"
+      ></div>
+      <div class="pseudo">{{ utilisateur.pseudo }}</div>
+      <div>{{ utilisateur.age }}</div>
+    </div>
+  </article>
+</div>
